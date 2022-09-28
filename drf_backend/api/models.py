@@ -4,7 +4,7 @@ from django.db import models
 
 class Todo(models.Model):
     id = models.IntegerField(primary_key=True,unique=True)
-    tasks = models.TextField(null=False, blank=False)
+    tasks = models.CharField(max_length=200, null=False, blank=False)
     completed = models.BooleanField()
     created = models.DateTimeField(auto_now_add=True)
 
