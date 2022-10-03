@@ -26,12 +26,7 @@ SECRET_KEY = 'django-insecure-7gcy&9262*g(eg2(scvf(f%tudxhuo_@x=%t%k@%gr30n05z3s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    'https://8000-dougmontas-appdjangores-3xebnjwwx58.ws-us67.gitpod.io/api/todos/',
-    'https://8000-dougmontas-appdjangores-3xebnjwwx58.ws-us67.gitpod.io/api/todos/create',
-    'https://8000-dougmontas-appdjangores-3xebnjwwx58.ws-us67.gitpod.io/admin',
-]
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -60,50 +55,9 @@ MIDDLEWARE = [
     
 ]
 
-# CORS_ORIGIN_WHITELIST = [
-#     'https://8000-dougmontas-appdjangores-3xebnjwwx58.ws-us68.gitpod.io.',
-#     'https://3000-dougmontas-appdjangores-3xebnjwwx58.ws-us68.gitpod.io.'
-    
-# ]
+CORS_ORIGIN_ALLOW_ALL = True
 
-ALLOWED_HOSTS = ['*']
-
-# CORS_ORIGIN_ALLOW_ALL = True
-
-CORS_ALLOW_ALL_ORIGINS = False
-
-CORS_ALLOWED_ORIGINS = [
-    "https://8000-dougmontas-appdjangores-3xebnjwwx58.ws-us67.gitpod.io",
-    'https://3000-dougmontas-appdjangores-3xebnjwwx58.ws-us67.gitpod.io',
-
-    # "http://127.0.0.1:3004/",
-    # "http://127.0.0.1:3003/",
-    # "http://127.0.0.1:3002/",
-    # "http://127.0.0.1:3001/",
-    # "http://127.0.0.1:3000/",
-
-]
-
-# CSRF_COOKIE_DOMAIN = [
-#     'https://8000-dougmontas-appdjangores-3xebnjwwx58.ws-us67.gitpod.io'
-#     ]
-
-# ALLOWED_HOSTS = [
-#     "*",
-#     "https://8001-dougmontas-appdjangores-3xebnjwwx58.ws-us67.gitpod.io",
-#     'https://3000-dougmontas-appdjangores-3xebnjwwx58.ws-us67.gitpod.io',
-
-# ]
-
-
-CORS_ALLOW_METHODS = [
-    "DELETE",
-    "GET",
-    "OPTIONS",
-    "PATCH",
-    "POST",
-    "PUT",
-]
+CSRF_TRUSTED_ORIGINS = ['https://*.gitpod.io']
 
 ROOT_URLCONF = 'drf_backend.urls'
 
